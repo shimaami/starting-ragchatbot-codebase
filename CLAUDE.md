@@ -2,6 +2,13 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## ⚠️ IMPORTANT: Use `uv` for All Dependency Management
+
+**Never use `pip` directly.** Always use `uv`:
+- `uv sync` - Install/sync dependencies
+- `uv run` - Run any Python command
+- Dependencies in `pyproject.toml`, locked in `uv.lock`
+
 ## Quick Commands
 
 **Start development server:**
@@ -11,7 +18,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 cd backend && uv run uvicorn app:app --reload --port 8000
 ```
 
-**Install dependencies:**
+**Install/sync dependencies:**
 ```bash
 uv sync
 ```
@@ -186,6 +193,13 @@ Located in `ai_generator.py:8-30`. Contains:
 ```
 
 ## Common Development Tasks
+
+### Managing Dependencies
+- **Add a dependency:** Edit `pyproject.toml`, then run `uv sync`
+- **Update dependencies:** `uv sync --upgrade`
+- **Run a script:** `uv run python script.py` (not `python script.py`)
+- **Install tools:** Always use `uv run` prefix
+- Never use `pip`, `pip3`, or `python -m pip`
 
 ### Add a New Course Document
 1. Create `.txt` file in `docs/` folder with format:
