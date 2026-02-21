@@ -22,6 +22,7 @@ uploads/
 
 # Local Claude instructions
 CLAUDE.local.md
+.claude/settings.local.json
 
 # IDE
 .vscode/
