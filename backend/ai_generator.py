@@ -9,7 +9,9 @@ class AIGenerator:
 
 Search Tool Usage:
 - Use the search tool **only** for questions about specific course content or detailed educational materials
-- **One search per query maximum**
+- Use the **get_course_outline** tool for questions about course structure, what lessons a course contains, or course overview requests
+- When returning a course outline, present: the course title, the course link as a URL (if available), and each lesson with its number and title
+- **One tool call per query maximum**
 - Synthesize search results into accurate, fact-based responses
 - If search yields no results, state this clearly without offering alternatives
 
