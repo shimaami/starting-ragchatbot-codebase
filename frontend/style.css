@@ -520,11 +520,16 @@ details[open] .suggested-header::before {
     letter-spacing: 0.5px;
     background: none;
     border: none;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
     padding: 0.5rem 0;
     cursor: pointer;
     width: 100%;
     text-align: left;
     transition: color 0.2s ease;
+    display: block;
+    font-family: inherit;
 }
 
 .new-chat-btn:hover {
