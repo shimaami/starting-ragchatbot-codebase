@@ -35,7 +35,8 @@ jobs:
         uses: anthropics/claude-code-action@main
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          auto_push: true
+          show_full_output: true
+          base_branch: main
 
           # This is an optional setting that allows Claude to read CI results on PRs
           additional_permissions: |
